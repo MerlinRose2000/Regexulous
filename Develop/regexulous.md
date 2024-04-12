@@ -39,19 +39,19 @@ OR operator allows you to match either of the specified alternatives. It acts as
 
 ### Character Classes
 
-You can designate particular character sets that can be utilized in a search pattern by using character classes. To match any number (0–9), for instance, use \d; to match any alphabetic letter (a–zA–Z0-9), use \w.
+You can designate particular character sets that can be utilized in a search pattern by using character classes. To match any number (0–9), for instance, use \\d; to match any alphabetic letter (a–zA–Z0-9), use \\w.
 
 ### Flags
 
-Flags can also be used by regexes to change how they behave. With the help of these flags, you may modify the behavior of the regex, enabling it to match on many lines or making it case-insensitive.
+Flags can also be used by regexes to change how they behave. With the help of these flags, you may modify the behavior of the regex, enabling it to match on many lines or making it case-insensitive. Different components you may find in a string of code to indentify flags include the Case Sensitive 'i' to ignore letter case, the Global 'g' to find all matches, and the Multiline 'm', which can change the behaviors of a Caret '^' and the Dollar Sign '$'.
 
 ### Grouping and Capturing
 
-Regexes are not limited to matching text strings; they can also capture all or part of a match and group them together. If you wish to save a portion of the matched text for later use, this is helpful. For instance, using the the Parenthases
+Regexes are not limited to matching text strings; they can also capture all or part of a match and group them together. If you wish to save a portion of the matched text for later use, this is helpful. For instance, using the Parentheses '()' aides in creating a capturing group, and using the Parentheses with an interrogation point and colon '(?: ) aides in non-capturing groups.
 
 ### Bracket Expressions
 
-Bracket expressions allow you to specify a set of characters that you want to match. You enclose these characters within Square Brackets '[]'.
+Bracket expressions allow you to specify a set of characters that you want to match. You enclose these characters within Square Brackets '[]', and a example for this is if you want to match lowercase letters, or even match digits, you can input [a-z] or [0-9].
 
 ### Greedy and Lazy Match
 
@@ -59,15 +59,15 @@ A greedy quantifier tries to match as much as possible while still satisfying th
 
 ### Boundaries
 
-Word boundaries, or just Boundaries, are defined as positions that are either followed by a character and not preceded by one, or that are preceded by a character and not followed by one.
+Word boundaries, or just Boundaries, are defined as positions that are either followed by a character and not preceded by one, or that are preceded by a character and not followed by one. For example, to match word boundaries, you would use \\b, and to match non-word boundaries, you would use \\B.
 
 ### Back-references
 
-Back-references serve as a functionality enabling the referencing and reusing of text captured by a capturing group within the same regex pattern. This feature offers a robust method for identifying repeated patterns and verifying intricate text structures.
+Back-references serve as a functionality enabling the referencing and reusing of text captured by a capturing group within the same regex pattern. This feature offers a robust method for identifying repeated patterns and verifying intricate text structures. You could use \\1, \\2, etc., to refer to captured groups, for example, (\\w)\\1 matches repeated letters.
 
 ### Look-ahead and Look-behind
 
-The application of look-ahead and look-behind is beneficial in situations where we need to find a pattern that is dependent on the preceding or succeeding context.
+The application of look-ahead and look-behind is beneficial in situations where we need to find a pattern that is dependent on the preceding or succeeding context. For example, a positive look-ahead, which asserts that a pattern follows, could use (?= ), and a negative look-ahead, which asserts that a pattern does not follow, could use (?! ).
 
 ## Author
 
